@@ -1,0 +1,22 @@
+@import "./variables";
+
+.button {
+  min-width: 101px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: 0.3s transform;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  letter-spacing: 2px;
+  border: 2px solid white;
+  padding: 5px 0px;
+}
+
+
+.btn-dark {
+    color: #000;
+    border: 2px solid #000;
+}
