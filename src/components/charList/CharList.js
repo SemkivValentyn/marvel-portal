@@ -29,7 +29,7 @@ class CharList extends Component {
     onCharListLoaded = (newCharList) => {  
 
         this.setState(({ charList, offset}) => ({
-            charList:[ ...charList, ...newCharList], //TODO: Проблема : Warning: Encountered two children with the same key
+            charList:[ ...charList, ...newCharList],
             loading: false,
             newItemLoading: false,
             offset: offset + 9
