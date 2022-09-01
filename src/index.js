@@ -6,7 +6,9 @@ import './style/style.scss';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <App/>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
 
 
