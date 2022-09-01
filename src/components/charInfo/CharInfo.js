@@ -122,9 +122,9 @@ const View = ({ char }) => {
                 {comics.length > 0 ? null : 'There is no comic book at the moment'}
 
                 {
-                    comics.map((item, i) => {
+                    comics.map((item, index) => {
                         return (
-                            <li key={i} className="char__comics-item">
+                            <li key={index} className="char__comics-item">
                                {item.name}
                             </li>
                         )

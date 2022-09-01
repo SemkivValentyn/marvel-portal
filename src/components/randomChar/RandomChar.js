@@ -106,10 +106,10 @@ const View = ({ char }) => {
                     {description}
                 </p>
                 <div className="randomchar__btns">
-                    <a href={homepage} className="button button__main">
+                    <a href={homepage} className="button button__main btn-dark">
                         <div className="inner">homepage</div>
                     </a>
-                    <a href={wiki} className="button button__secondary">
+                    <a href={wiki} className="button button__secondary btn-dark">
                         <div className="inner">Wiki</div>
                     </a>
                 </div>

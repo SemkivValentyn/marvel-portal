@@ -9,22 +9,37 @@ class CharList extends Component {
     state = {
         charList: [],
         loading: true,
-        error: false
+        error: false,
+        newItemLoading: false,
+        offset: 210,
+
     }
 
     marvelService = new MarvelService();
 
-    componentDidMount() {
-        this.marvelService.getAllCharacters()
-            .then(this.onCharListLoaded)
-            .catch(this.onError)
+
+    onLoadCharList = () => {
+        this.setState({
+            newItemLoading: true
+        })
+    }
+    
+
+    onCharListLoaded = (newCharList) => {  
+        this.setState(({ charList, offset}) => ({
+            charList: newCharList, //TODO: Проблема : Warning: Encountered two children with the same key
+            loading: false,
+            newItemLoading: false,
+            offset: offset + 9
+        }))
     }
 
-    onCharListLoaded = (charList) => {
-        this.setState({
-            charList,
-            loading: false
-        })
+
+    onRequest = (offset) => {
+        this.onLoadCharList();
+        this.marvelService.getAllCharacters(offset)
+            .then(this.onCharListLoaded)
+            .catch(this.onError)
     }
 
     onError = () => {
@@ -46,7 +61,7 @@ class CharList extends Component {
                     className="char__item"
                     key={item.id}
                     onClick={() => this.props.onCharSelected(item.id)}
-                    >
+                >
                     <img src={item.thumbnail} alt={item.name} style={imgStyle} />
                     <div className="char__name">{item.name}</div>
                 </li>
@@ -59,9 +74,16 @@ class CharList extends Component {
         )
     }
 
+
+
+    componentDidMount() {
+        this.onRequest();
+    }
+
     render() {
 
-        const { charList, loading, error } = this.state;
+        const { charList, loading, error, offset, newItemLoading  } = this.state;
+
 
         const items = this.renderItems(charList);
 
@@ -74,7 +96,11 @@ class CharList extends Component {
                 {errorMessage}
                 {spinner}
                 {content}
-                <button className="button button__main button__long  btn-dark btn-char-list">
+                <button 
+                    className="button button__main button__long  btn-dark btn-char-list"
+                    disabled={newItemLoading}
+                    onClick={() => this.onRequest(offset)}
+                    >
                     <div className="inner">load more</div>
                 </button>
             </div>
