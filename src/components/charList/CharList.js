@@ -50,8 +50,6 @@ class CharList extends Component {
     }
 
     onNewCharListLoaded = (newCharList) => {
-
-
         this.setState(({ offset, charList }) => ({
             charList: [...charList, ...newCharList],
             loading: false,
