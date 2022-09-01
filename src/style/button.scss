@@ -8,11 +8,15 @@
   font-size: 14px;
   transition: 0.3s transform;
   border: none;
+  border-radius: 10px;
   background-color: transparent;
   cursor: pointer;
   letter-spacing: 2px;
   border: 2px solid white;
   padding: 5px 0px;
+  :hover {
+    color: #9F0013;
+  }
 }
 
 

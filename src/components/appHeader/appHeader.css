@@ -4,6 +4,8 @@ header{
   overflow:hidden;
   background-color:#262626; 
   margin-bottom:50px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 #logo{
   font-size:25px; 
@@ -33,4 +35,5 @@ nav a{
 
 nav a:hover {
     color: #9F0013;
+    
 }

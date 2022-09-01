@@ -4,12 +4,19 @@
     display: grid;
     grid-template-columns: repeat(2, 50%);
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     align-items: center;
+    border-radius: 10px;
+
     &__block {
+        border-radius: 10px;
+        margin: 10px;
         padding: 40px 35px;
         display: grid;
         grid-template-columns: 180px auto;
         column-gap: 30px;
+        background-color: rgba(255, 255, 255, 0.603);
     }
     &__img {
         width: 180px;
@@ -24,7 +31,7 @@
     }
     &__name {
         font-weight: bold;
-        font-size: 22px;
+        font-size: 20px;
         line-height: 29px;
         text-transform: uppercase;
     }
@@ -38,7 +45,9 @@
         }
     }
     &__static {
-        padding: 40px 35px;
+        border-radius: 10px;
+        margin: 10px;
+        padding: 43px 36px;
         background-color: $dark;
         position: relative;
         button {
