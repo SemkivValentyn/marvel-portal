@@ -1,5 +1,8 @@
 import './appHeader.css';
 
+
+
+
 const AppHeader = () => {
     return (
         <header>
@@ -7,8 +10,8 @@ const AppHeader = () => {
             <nav>
                 <div className="dropdown">
                     <div className="dropdown-content">
-                        <a href="#">Comics</a>
-                        <a href="#">Characters</a>
+                        <a href="https://www.marvel.com/comics">Comics</a>
+                        <a href="https://www.marvel.com/characters">Characters</a>
                     </div>
 
                 </div>
