@@ -1,11 +1,11 @@
 import ComicsList from "../comicsList/ComicsList";
 
 const ComicsPage = () => {
-    return (
-        <>
-            <ComicsList/>
-        </>
-    )
-}
+  return (
+    <>
+      <ComicsList />
+    </>
+  );
+};
 
 export default ComicsPage;

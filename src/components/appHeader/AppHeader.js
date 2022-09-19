@@ -12,12 +12,12 @@ const AppHeader = () => {
         <div className="dropdown">
           <div className="dropdown-content">
             <li>
-              <NavLink end activeStyle={{ color: "#9f0013" }} to="/comics">
+              <NavLink end to="/comics">
                 Comics
               </NavLink>
             </li>
             <li>
-              <NavLink end activeStyle={{ color: "#9f0013" }} to="/">
+              <NavLink end to="/">
                 Characters
               </NavLink>
             </li>
