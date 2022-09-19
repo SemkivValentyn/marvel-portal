@@ -16,6 +16,7 @@ const ComicsList = () => {
 
     useEffect(() => {
         onRequest(offset, true);
+        // eslint-disable-next-line
     }, [])
 
     const onRequest = (offset, initial) => {
@@ -39,6 +40,7 @@ const ComicsList = () => {
         const items = arr.map((item, i) => {
             return (
                 <li className="comics__item" key={i}>
+                    
                     <a href="#">
                         <img src={item.thumbnail} alt={item.title} className="comics__item-img"/>
                         <div className="comics__item-name">{item.title}</div>
@@ -68,7 +70,7 @@ const ComicsList = () => {
             <button 
                 disabled={newItemLoading} 
                 style={{'display' : comicsEnded ? 'none' : 'block'}}
-                className="button button__main button__long"
+                className="button button__main button__long btn-dark"
                 onClick={() => onRequest(offset)}>
                 <div className="inner">load more</div>
             </button>
