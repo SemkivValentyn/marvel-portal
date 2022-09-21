@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import pages404 from '../../resources/img/404.webp'
 
 const Page404 = () => {
